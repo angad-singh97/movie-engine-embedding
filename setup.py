@@ -1,12 +1,22 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r", encoding="utf-8") as f:
+    long_description = f.read()
+
 setup(
     name="movie_query_engine",
     version="0.1.0",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        "pandas", "numpy", "scikit-learn", "sentence-transformers", "tqdm", "matplotlib", "seaborn"
+        "pandas==1.5.3",
+        "numpy==1.24.2",
+        "scikit-learn==1.2.2",
+        "torch>=1.13,<2.1",
+        "sentence-transformers==2.2.2",
+        "tqdm==4.65.0",
+        "matplotlib==3.7.1",
+        "seaborn==0.12.2"
     ],
     entry_points={
         'console_scripts': [
@@ -15,5 +25,13 @@ setup(
     },
     author="Angad S",
     description="Search engine over movies using TF-IDF and SBERT",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     python_requires=">=3.7",
+    license="MIT",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ]
 )
