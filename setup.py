@@ -9,14 +9,15 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        "pandas==1.5.3",
-        "numpy==1.24.2",
-        "scikit-learn==1.2.2",
+        "pandas>=2.2.2",
+        "numpy>=1.24.4",
+        "scikit-learn>=1.3.2",
         "torch>=1.13,<2.1",
-        "sentence-transformers==2.2.2",
-        "tqdm==4.65.0",
-        "matplotlib==3.7.1",
-        "seaborn==0.12.2"
+        "sentence-transformers>=2.2.2",
+        "huggingface-hub>=0.27.0",
+        "tqdm>=4.65.0",
+        "matplotlib>=3.8.0",
+        "seaborn>=0.12.2"
     ],
     entry_points={
         'console_scripts': [
@@ -27,7 +28,7 @@ setup(
     description="Search engine over movies using TF-IDF and SBERT",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     license="MIT",
     classifiers=[
         "Programming Language :: Python :: 3",
