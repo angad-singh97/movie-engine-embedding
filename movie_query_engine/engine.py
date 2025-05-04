@@ -1,20 +1,20 @@
-from utils import (
+from .utils import (
     generate_full_movie_corpus, 
     load_training_examples
 )
 
-from tf_idf import (
+from .tf_idf import (
     search_tfidf_full,
     tfidf_vectorize_corpus
 )
 
-from sbert import (
+from .sbert import (
     save_sbert_embeddings, 
     load_sbert_embeddings, 
     search_sbert
 )
 
-from constants import (
+from .constants import (
     VANILLA_MODEL_NAME,
     VANILLA_EMB_PATH,
     FINETUNED_MODEL_DIR,
